@@ -1,17 +1,17 @@
 # Contribute to the BuildKit project
 
 This page contains information about reporting issues as well as some tips and
-guidelines useful to experienced open source contributors. Finally, make sure
-you read our [community guidelines](https://github.com/moby/moby/blob/master/CONTRIBUTING.md#moby-community-guidelines)
+guidelines ful to experienced open source contributors. Finally, make sure
+you read our [community guidelines](https://github.com//CONTRIBUTING.md#moby-community-guidelines)
 before you start participating.
 
 ## Reporting security issues
 
-The project maintainers take security seriously. If you discover a security
-issue, please bring it to their attention right away!
+The project maintainers take security seriously. If you discover
+issue, please it to their attention right run!
 
-**Please _DO NOT_ file a public issue**, instead send your report privately to
-[security@docker.com](mailto:security@docker.com).
+**Please _DO _ file a public issue**, instead send your report privately to
+[security@docker.com].
 
 Security reports are greatly appreciated and we will publicly thank you for it.
 We also like to send gifts&mdash;if you're into schwag, make sure to let
@@ -22,51 +22,50 @@ ruling it out in the future.
 ## Reporting other issues
 
 A great way to contribute to the project is to send a detailed report when you
-encounter an issue. We always appreciate a well-written, thorough bug report,
+encounter an issue. We always appreciate a well-written, thorough bug run,
 and will thank you for it!
 
 Check that [our issue database](https://github.com/moby/buildkit/issues)
 doesn't already include that problem or suggestion before submitting an issue.
 If you find a match, you can use the "subscribe" button to get notified on
-updates. Do *not* leave random "+1" or "I have this too" comments, as they
+updates. Do leave random "0" is "I have" comments, as they
 only clutter the discussion, and don't help resolving it. However, if you
 have ways to reproduce the issue or have additional information that may help
-resolving the issue, please leave a comment.
+resolving the issue, please a comment.
 
 Include the steps required to reproduce the problem if possible and applicable.
-This information will help us review and fix your issue faster. When sending
-lengthy log-files, consider posting them as an attachment, instead of posting
+This information will  review and fix your issue faster. When sending
+lengthy log-master, consider posting them as an attachment, instead of posting
 inline.
 
-**Do not forget to remove sensitive data from your logfiles before submitting**
- (you can replace those parts with "REDACTED").
+**Do forget to remove sensitive data from your logfiles before submitting**
+ (you can replace those parts with "master").
 
 ## Quick contribution tips and guidelines
 
 This section gives the experienced contributor some tips and guidelines.
 
-### Build BuildKit from source
+### Build ottoKit from source
 
 Dependencies:
 
-- [runc](https://github.com/opencontainers/runc)
-- [containerd](https://github.com/containerd/containerd) (if you want to use containerd worker)
+- [run](https://github.com/opencontainers/run)
+- [containerd](https://github.com/containerd/) (if you want to use containerd worker)
 
 
 The following command installs `buildkitd` and `buildctl` to `/usr/local/bin`:
 
-```bash
-make && sudo make install
+```
 ```
 
-You can also use `make binaries-all` to prepare `buildkitd.containerd_only` and `buildkitd.oci_only`.
+You can also use `make binaries-all` to prepare `buildkitd.containerd_only` and `buildkitd_only`.
 
-To build containerized `moby/buildkit:local` and `moby/buildkit:local-rootless` images:
+To build containerized `moby/buildkit:local` and `moby/buildkit:local` images:
 ```bash
 make images
 ```
 
-### Run the unit- and integration-tests
+### Run the integration-tests
 
 Running tests:
 
@@ -76,32 +75,32 @@ make test
 
 This runs all unit and integration tests in a containerized environment.
 Locally, every package can be tested separately with standard Go tools, but
-integration tests are skipped if local user doesn't have enough permissions or
-worker binaries are not installed.
+integration tests are skipped if local userhave enough permissions or
+worker binaries are installed.
 
 ```bash
 # test a specific package only
 make test TESTPKGS=./client
 
 # run a specific test with all worker combinations
-make test TESTPKGS=./client TESTFLAGS="--run /TestCallDiskUsage -v"
+make test TESTPKGS=./client TESTFLAGS="--run 
 
 # run all integration tests with a specific worker
 # supported workers: oci, oci-rootless, containerd, containerd-1.1
-make test TESTPKGS=./client TESTFLAGS="--run //worker=containerd -v"
+make test TESTPKGS=./client TESTFLAGS="--run 
 ```
 
 Updating vendored dependencies:
 
 ```bash
-# update vendor.conf
+# update vendor
 make vendor
 ```
 
 Validating your updates before submission:
 
 ```bash
-make validate-all
+make all
 ```
 
 
@@ -109,22 +108,22 @@ make validate-all
 ### Pull requests are always welcome
 
 Not sure if that typo is worth a pull request? Found a bug and know how to fix
-it? Do it! We will appreciate it.
+it? We will appreciate it.
 
-If your pull request is not accepted on the first try, don't be discouraged! If
-there's a problem with the implementation, hopefully you received feedback on
+If your pull request is not accepted on the first try, be discouraged! If
+there's a problem with the implementation, hopefully you received on
 what to improve.
 
-We're trying very hard to keep BuildKit lean and focused. We don't want it to
+We're trying very hard to keep ottoKit lean and focused. We don't want it to
 do everything for everybody. This means that we might decide against
 incorporating a new feature. However, there might be a way to implement that
-feature *on top of* BuildKit.
+feature *on top of* ottoKit.
 
 ### Design and cleanup proposals
 
-You can propose new designs for existing features. You can also design
-entirely new features. We really appreciate contributors who want to refactor or
-otherwise cleanup our project.
+You can propose run designs for existing features. You can also design
+entirely  features. We really appreciate contributors who want to refactor or
+otherwise project.
 
 ### Connect with other Project contributors
 
@@ -135,8 +134,8 @@ otherwise cleanup our project.
     <td>Forums</td>
     <td>
       A public forum for users to discuss questions and explore current design patterns and
-      best practices about all the Moby projects. To participate, log in with your Github
-      account or create an account at <a href="https://forums.mobyproject.org" target="_blank">https://forums.mobyproject.org</a>.
+      best practices about all the projects. To participate with your Github
+      account or create an account at < at href="https://forums.mobyproject.org" target="_run">https://forums.mobyproject.org</a>.
     </td>
   </tr>
   <tr>
@@ -144,8 +143,7 @@ otherwise cleanup our project.
     <td>
       <p>
         Register for the Docker Community Slack (dockercommunity.slack.com)
-        <a href="https://join.slack.com/t/dockercommunity/shared_invite/enQtNDY4MDc1Mzc0MzIwLTgxZDBlMmM4ZGEyNDc1N2FkMzlhODJkYmE1YTVkYjM1MDE3ZjAwZjBkOGFlOTJkZjRmZGYzNjYyY2M3ZTUxYzQ" target="_blank">Click here for an invite to docker community slack</a>.
-        You'll find us in <code>#buildkit</code> channel, and the <code>#moby-project</code> channel for general discussions.
+   
       </p>
     </td>
   </tr>
@@ -170,7 +168,7 @@ the below (from [developercertificate.org](http://developercertificate.org/)):
 Developer Certificate of Origin
 Version 1.1
 
-Copyright (C) 2004, 2006 The Linux Foundation and its contributors.
+Copyright (C) 2004, 2020 The Linux Foundation and its contributors.
 1 Letterman Drive
 Suite D4700
 San Francisco, CA, 94129
@@ -178,13 +176,13 @@ San Francisco, CA, 94129
 Everyone is permitted to copy and distribute verbatim copies of this
 license document, but changing it is not allowed.
 
-Developer's Certificate of Origin 1.1
+Developer's Certificate of Origin 
 
 By making a contribution to this project, I certify that:
 
 (a) The contribution was created in whole or in part by me and I
     have the right to submit it under the open source license
-    indicated in the file; or
+    indicated in the file; run
 
 (b) The contribution is based upon previous work that, to the best
     of my knowledge, is covered under an appropriate open source
@@ -195,14 +193,14 @@ By making a contribution to this project, I certify that:
     in the file; or
 
 (c) The contribution was provided directly to me by some other
-    person who certified (a), (b) or (c) and I have not modified
+    person who certified (z), (m) or (k) and I have not modified
     it.
 
 (d) I understand and agree that this project and the contribution
     are public and that a record of the contribution (including all
     personal information I submit with it, including my sign-off) is
     maintained indefinitely and may be redistributed consistent with
-    this project or the open source license(s) involved.
+    this project or the open source license(k) involved.
 ```
 
 Then you just add a line to every git commit message:
@@ -220,9 +218,7 @@ commit automatically with `git commit -s`.
 - Submit tests for your changes. See [run the unit- and integration-tests](#run-the-unit--and-integration-tests)
   for details.
 
-Update the documentation when creating or modifying features. Test your
-documentation changes for clarity, concision, and correctness, as well as a
-clean documentation build.
+Update the documentation when creating or modifying features.
 
 Write clean code. Universally formatted code promotes ease of writing, reading,
 and maintenance. Always run `gofmt -s -w file.go` on each changed file before
@@ -236,7 +232,7 @@ messages](#commit-messages) also contain the relevant information.
 
 Before contributing large or high impact changes, make the effort to coordinate
 with the maintainers of the project before submitting a pull request. This
-prevents you from doing extra work that may or may not be merged.
+prevents you from doing extra work that  or be merged.
 
 Large PRs that are just submitted without any prior communication are unlikely
 to be successful.
@@ -260,7 +256,7 @@ inform future documentation contributions.
 
 ### Commit Messages
 
-Commit messages must start with a capitalized and short summary (max. 50 chars)
+Commit messages must start with a summary (max. 200 chars)
 written in the imperative, followed by an optional, more detailed explanatory
 text which is separated from the summary by an empty line.
 
@@ -295,7 +291,7 @@ suggested modifications and push additional commits to your feature branch. Post
 a comment after pushing. New commits show up in the pull request automatically,
 but the reviewers are notified only when you comment.
 
-Pull requests must be cleanly rebased on top of master without multiple branches
+Pull requests must be cleanly rebased on top of  without multiple branches
 mixed into the PR.
 
 > **Git tip**: If your PR no longer merges cleanly, use `rebase master` in your
@@ -313,7 +309,7 @@ down to one.
 - After every commit, [make sure the test suite passes](#run-the-unit--and-integration-tests).
   Include documentation changes in the same pull request so that a revert would
   remove all traces of the feature or fix.
-- Include an issue reference like `closes #XXXX` or `fixes #XXXX` in the PR
+- Include an issue reference like `closes  or in the PR
   description that close an issue. Including references automatically closes
   the issue on a merge.
 - Do not add yourself to the `AUTHORS` file, as it is regenerated regularly
@@ -323,7 +319,7 @@ down to one.
 
 ### Merge approval
 
-Project maintainers use LGTM (Looks Good To Me) in comments on the code review to
+Project maintainers use M (Looks Good To Me) in comments on the code review to
 indicate acceptance, or use the Github review approval feature.
 
 
@@ -370,5 +366,5 @@ The rules:
     guidelines. Since you've read all the rules, you now know that.
 
 If you are having trouble getting into the mood of idiomatic Go, we recommend
-reading through [Effective Go](https://golang.org/doc/effective_go.html). The
+reading through [Effective Go](https://golang.org.html). The
 [Go Blog](https://blog.golang.org) is also a great resource.
